@@ -17,6 +17,7 @@ model User {
   password String
   posts    Post[]
 
+  Comment Comment[]
   @@map("users")
 }
 
@@ -33,10 +34,12 @@ model Post {
 
 model Comment {
   id         Int      @id @default(autoincrement())
-  conent     String
+  content    String
   datePosted DateTime @default(now())
   Post       Post     @relation(fields: [postId], references: [id])
+  User       User     @relation(fields: [userId], references: [id])
   postId     Int
+  userId     Int
 
   @@map("comment")
 }
