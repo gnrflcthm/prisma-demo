@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+       "pretty": true,
+        "esModuleInterop": true
+    },
+    "compileOnSave": true,
+    "include": [
+        "index.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
